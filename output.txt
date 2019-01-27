@@ -1,0 +1,714 @@
+Jonathan Chang
+CS 2303 C01 18
+Assignment 2 - Game of Life
+Sample Output
+
+Output with the command line ./life 9 9 250 r_pentomino.txt y n
+
+Game of Life
+
+Generation: 0
+         
+         
+         
+    xx   
+   xx    
+    x    
+         
+         
+         
+
+Generation: 1
+         
+         
+         
+   xxx   
+   x     
+   xx    
+         
+         
+         
+
+Generation: 2
+         
+         
+    x    
+   xx    
+  x  x   
+   xx    
+         
+         
+         
+
+Generation: 3
+         
+         
+   xx    
+   xxx   
+  x  x   
+   xx    
+         
+         
+         
+
+Generation: 4
+         
+         
+   x x   
+  x  x   
+  x  x   
+   xx    
+         
+         
+         
+
+Generation: 5
+         
+         
+    x    
+  xx xx  
+  x  x   
+   xx    
+         
+         
+         
+
+Generation: 6
+         
+         
+   xxx   
+  xx xx  
+  x  xx  
+   xx    
+         
+         
+         
+
+Generation: 7
+         
+    x    
+  xx xx  
+  x      
+  x   x  
+   xxx   
+         
+         
+         
+
+Generation: 8
+         
+   xxx   
+  xxxx   
+ xx  xx  
+  x xx   
+   xxx   
+    x    
+         
+         
+
+Generation: 9
+    x    
+  x  x   
+ x       
+ x    x  
+ xx      
+         
+   xxx   
+         
+         
+
+Generation: 10
+         
+         
+ xx      
+xx       
+ xx      
+  xxx    
+    x    
+    x    
+         
+
+Generation: 11
+         
+         
+xxx      
+x        
+x        
+ xx x    
+    xx   
+         
+         
+
+Generation: 12
+         
+ x       
+xx       
+x        
+x        
+ x xxx   
+   xxx   
+         
+         
+
+Generation: 13
+         
+xx       
+xx       
+x        
+xx  x    
+  xx x   
+  xx x   
+    x    
+         
+
+Generation: 14
+         
+xx       
+         
+         
+xxxxx    
+     x   
+  x  x   
+   xx    
+         
+
+Generation: 15
+         
+         
+         
+ xxx     
+ xxxx    
+     x   
+   x x   
+   xx    
+         
+
+Generation: 16
+         
+         
+  x      
+ x  x    
+ x  x    
+     x   
+   x x   
+   xx    
+         
+
+Generation: 17
+         
+         
+         
+ xxx     
+    xx   
+     x   
+   x x   
+   xx    
+         
+
+Generation: 18
+         
+         
+  x      
+  xxx    
+  xxxx   
+     xx  
+   x x   
+   xx    
+         
+
+Generation: 19
+         
+         
+  x      
+ x   x   
+  x   x  
+  x   x  
+   x xx  
+   xx    
+         
+
+Generation: 20
+         
+         
+         
+ xx      
+ xx  xx  
+  xx  xx 
+  xx xx  
+   xxx   
+         
+
+Generation: 21
+         
+         
+         
+ xx      
+     xxx 
+       x 
+       x 
+  xx xx  
+    x    
+
+Generation: 22
+         
+         
+         
+      x  
+      xx 
+       xx
+       x 
+   xxxx  
+   xxx   
+
+Generation: 23
+         
+         
+         
+      xx 
+      x x
+        x
+    xx xx
+   x  x  
+   x  x  
+
+Generation: 24
+         
+         
+         
+      xx 
+      x x
+     xx x
+    xxxxx
+   x  x  
+         
+
+Generation: 25
+         
+         
+         
+      xx 
+        x
+    x   x
+    x   x
+    x x  
+         
+
+Generation: 26
+         
+         
+         
+       x 
+        x
+       xx
+   xx  x 
+     x   
+         
+
+Generation: 27
+         
+         
+         
+         
+        x
+       xx
+    x xxx
+    x    
+         
+
+Generation: 28
+         
+         
+         
+         
+       xx
+      x  
+     xx x
+     x x 
+         
+
+Generation: 29
+         
+         
+         
+         
+       x 
+     xx x
+     x   
+     x x 
+         
+
+Generation: 30
+         
+         
+         
+         
+      xx 
+     xxx 
+    xx x 
+      x  
+         
+
+Generation: 31
+         
+         
+         
+         
+     x x 
+    x   x
+    x  x 
+     xx  
+         
+
+Generation: 32
+         
+         
+         
+         
+         
+    xxxxx
+    x xx 
+     xx  
+         
+
+Generation: 33
+         
+         
+         
+         
+     xxx 
+    x   x
+    x   x
+     xxx 
+         
+
+Generation: 34
+         
+         
+         
+      x  
+     xxx 
+    x x x
+    x x x
+     xxx 
+      x  
+
+Generation: 35
+         
+         
+         
+     xxx 
+         
+    x   x
+    x   x
+         
+     xxx 
+
+Generation: 36
+         
+         
+      x  
+      x  
+     xxx 
+         
+         
+     xxx 
+      x  
+
+Generation: 37
+         
+         
+         
+         
+     xxx 
+      x  
+      x  
+     xxx 
+     xxx 
+
+Generation: 38
+         
+         
+         
+      x  
+     xxx 
+         
+         
+         
+     x x 
+
+Generation: 39
+         
+         
+         
+     xxx 
+     xxx 
+      x  
+         
+         
+         
+
+Generation: 40
+         
+         
+      x  
+     x x 
+         
+     xxx 
+         
+         
+         
+
+Generation: 41
+         
+         
+      x  
+      x  
+     x x 
+      x  
+      x  
+         
+         
+
+Generation: 42
+         
+         
+         
+     xxx 
+     x x 
+     xxx 
+         
+         
+         
+
+Generation: 43
+         
+         
+      x  
+     x x 
+    x   x
+     x x 
+      x  
+         
+         
+
+Generation: 44
+         
+         
+      x  
+     xxx 
+    xx xx
+     xxx 
+      x  
+         
+         
+
+Generation: 45
+         
+         
+     xxx 
+    x   x
+    x   x
+    x   x
+     xxx 
+         
+         
+
+Generation: 46
+         
+      x  
+     xxx 
+    x x x
+   xxx xx
+    x x x
+     xxx 
+      x  
+         
+
+Generation: 47
+         
+     xxx 
+         
+   x    x
+   x    x
+   x    x
+         
+     xxx 
+         
+
+Generation: 48
+      x  
+      x  
+      xx 
+         
+  xxx  xx
+         
+      xx 
+      x  
+      x  
+
+Generation: 49
+         
+     xx  
+      xx 
+   x  x x
+   x     
+   x  x x
+      xx 
+     xx  
+         
+
+Generation: 50
+         
+     xxx 
+         
+      x  
+  xxx    
+      x  
+         
+     xxx 
+         
+
+Generation: 51
+      x  
+      x  
+     x x 
+   x     
+   x x   
+   x     
+     x x 
+      x  
+      x  
+
+Generation: 52
+         
+     xxx 
+      x  
+      x  
+  xx     
+      x  
+      x  
+     xxx 
+         
+
+Generation: 53
+      x  
+     xxx 
+         
+         
+         
+         
+         
+     xxx 
+      x  
+
+Generation: 54
+     xxx 
+     xxx 
+      x  
+         
+         
+         
+      x  
+     xxx 
+     xxx 
+
+Generation: 55
+     x x 
+         
+     xxx 
+         
+         
+         
+     xxx 
+         
+     x x 
+
+Generation: 56
+         
+     x x 
+      x  
+      x  
+         
+      x  
+      x  
+     x x 
+         
+
+Generation: 57
+         
+      x  
+     xxx 
+         
+         
+         
+     xxx 
+      x  
+         
+
+Generation: 58
+         
+     xxx 
+     xxx 
+      x  
+         
+      x  
+     xxx 
+     xxx 
+         
+
+Generation: 59
+      x  
+     x x 
+         
+     xxx 
+         
+     xxx 
+         
+     x x 
+      x  
+
+Generation: 60
+      x  
+      x  
+     x x 
+      x  
+         
+      x  
+     x x 
+      x  
+      x  
+
+Generation: 61
+         
+     xxx 
+     x x 
+      x  
+         
+      x  
+     x x 
+     xxx 
+         
+
+Generation: 62
+      x  
+     x x 
+     x x 
+      x  
+         
+      x  
+     x x 
+     x x 
+      x  
+
+Final Generation:63
+      x  
+     x x 
+     x x 
+      x  
+         
+      x  
+     x x 
+     x x 
+      x  
+
+Terminated: Stuck or alternating grid patterns.
